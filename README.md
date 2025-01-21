@@ -1,58 +1,65 @@
-Foro Hub: API REST para un foro de discusión
+# Foro Hub: Challenge Back End
 
+## Descripción del Proyecto
+¡Te damos la bienvenida a nuestro más reciente **Challenge Back End**!
 
-Descripción
+Un foro es un lugar donde todos los participantes de una plataforma pueden colocar sus preguntas sobre determinados asuntos. Aquí en Alura, los estudiantes utilizan el foro para resolver sus dudas sobre los cursos y proyectos en los que están participando. Este lugar mágico está lleno de aprendizaje y colaboración entre estudiantes, profesores y moderadores.
 
-Este proyecto es una entrega del desafío de backend dictado por Oracle en colaboración con Alura LATAM. El objetivo principal es 
-desarrollar una API REST funcional para un foro de discusión, implementando funcionalidades CRUD para tópicos y utilizando tecnologías como Spring Boot y JWT para autenticación
-y autorización.
+En este proyecto, replicaremos el funcionamiento de un foro a nivel de back end. Nuestro objetivo es entender cómo se almacenan las informaciones, cómo se relacionan los datos (tópicos, respuestas, usuarios) y cómo todo esto opera detrás de escena. 
 
-Tecnologías utilizadas
+Para ello, crearemos una **API REST** usando **Spring**.
 
-Spring Boot: Framework para desarrollo de aplicaciones Java.
-Java: Lenguaje de programación principal.
-Base de datos: MySQL
-Pruebas de la API: Insomnia
+---
 
+## Funcionalidades de la API
+Nuestra API se centrará específicamente en los tópicos, permitiendo a los usuarios realizar las siguientes operaciones:
 
-Estructura del proyecto
+1. **Crear un nuevo tópico**
+2. **Mostrar todos los tópicos creados**
+3. **Mostrar un tópico específico**
+4. **Actualizar un tópico**
+5. **Eliminar un tópico**
 
-src/main/java: Contiene el código fuente de la aplicación.
-src/test/java: Contiene las pruebas unitarias.
-resources: Contiene archivos de configuración, como el archivo application.properties.
+Estas funcionalidades corresponden a las operaciones básicas del modelo **CRUD** (CREATE, READ, UPDATE, DELETE).
 
+---
 
-Instalación
+## Características del Proyecto
+Al final del desarrollo, tendremos una API REST con las siguientes características:
 
-Clonar el repositorio: git clone https://github.com/tu-usuario/foro-hub.git
+- Rutas implementadas siguiendo las mejores prácticas del modelo REST.
+- Validaciones realizadas según reglas de negocio.
+- Implementación de una base de datos para la persistencia de la información.
+- Servicio de autenticación/autorización para restringir el acceso a la información.
 
-Configurar la base de datos: Crea una base de datos con el nombre y las credenciales especificados en el archivo application.properties.
+---
 
-Instalar dependencias: ./gradlew build
+## Pasos para completar el desafío
+1. **Configuración del Entorno**
+   - Configurar el entorno de desarrollo con Java, Spring Boot y las herramientas necesarias.
 
-Ejecutar la aplicación: ./gradlew bootRun
+2. **Diseño del Modelo de Datos**
+   - Definir las entidades principales (Tópicos, Usuarios, Respuestas) y sus relaciones.
 
+3. **Implementación de la API**
+   - Crear rutas para el CRUD de los tópicos.
 
-Uso
+4. **Validaciones y Reglas de Negocio**
+   - Agregar validaciones en las solicitudes para garantizar la consistencia de los datos.
 
-La API expone los siguientes endpoints:
+5. **Persistencia de Datos**
+   - Implementar una base de datos relacional para almacenar la información.
 
-POST /topicos: Crear un nuevo tópico.
-GET /topicos: Obtener una lista de todos los tópicos.
-GET /topicos/{id}: Obtener un tópico específico por su ID.
-PUT /topicos/{id}: Actualizar un tópico existente.
-DELETE /topicos/{id}: Eliminar un tópico.
+6. **Autenticación y Autorización**
+   - Añadir un servicio de autenticación/autorización para proteger los datos sensibles.
 
+---
 
-Consideraciones de Seguridad
+## Tecnologías Utilizadas
+- Lenguaje: Java
+- Framework: Spring Boot
+- Base de Datos: Relacional (MySQL, PostgreSQL u otra de tu elección)
+- Modelo REST
 
-Encriptación de contraseñas: Se utiliza bcrypt para almacenar las contraseñas de forma segura.
-JWT: Los tokens JWT se utilizan para autenticar a los usuarios y proteger las rutas de la API.
-CORS: Se configura CORS para permitir solicitudes desde orígenes permitidos.
-
-Contribuciones
-
-
-Las contribuciones son bienvenidas. Por favor, abre un issue para discutir nuevas características o mejoras.
-
-
+## Contribución
+Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio y envía tus propuestas mediante un pull request. Todas las ideas son bienvenidas.
